@@ -22,7 +22,11 @@ namespace ContainerShipWindowsForms
         {
 
         }
-
+        /// <summary>
+        /// Выборка файла для задачи
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         private void button1_Click(object sender, EventArgs e)
         {
             var openFileDialog1 = new OpenFileDialog();
@@ -39,7 +43,11 @@ namespace ContainerShipWindowsForms
         {
 
         }
-
+        /// <summary>
+        /// Выполнение задачи
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         private void button2_Click(object sender, EventArgs e)
         {
             outputTB.Clear();
@@ -94,6 +102,11 @@ namespace ContainerShipWindowsForms
         }
 
         private void textBox4_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void Form1_Load(object sender, EventArgs e)
         {
 
         }
