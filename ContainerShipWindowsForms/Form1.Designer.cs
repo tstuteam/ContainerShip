@@ -36,10 +36,8 @@ namespace ContainerShipWindowsForms
             this.outputTB = new System.Windows.Forms.TextBox();
             this.findBtn = new System.Windows.Forms.Button();
             this.pathTB = new System.Windows.Forms.TextBox();
-            this.flowLayoutPanel1 = new System.Windows.Forms.FlowLayoutPanel();
-            this.flowLayoutPanel2 = new System.Windows.Forms.FlowLayoutPanel();
-            this.flowLayoutPanel1.SuspendLayout();
-            this.flowLayoutPanel2.SuspendLayout();
+            this.tableLayoutPanel1 = new System.Windows.Forms.TableLayoutPanel();
+            this.tableLayoutPanel1.SuspendLayout();
             this.SuspendLayout();
             // 
             // openFileDialog1
@@ -50,7 +48,7 @@ namespace ContainerShipWindowsForms
             // openFileBtn
             // 
             this.openFileBtn.Font = new System.Drawing.Font("Microsoft Sans Serif", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.openFileBtn.Location = new System.Drawing.Point(3, 3);
+            this.openFileBtn.Location = new System.Drawing.Point(3, 107);
             this.openFileBtn.Name = "openFileBtn";
             this.openFileBtn.Size = new System.Drawing.Size(192, 53);
             this.openFileBtn.TabIndex = 0;
@@ -64,7 +62,7 @@ namespace ContainerShipWindowsForms
             this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label1.Location = new System.Drawing.Point(3, 0);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(286, 37);
+            this.label1.Size = new System.Drawing.Size(169, 74);
             this.label1.TabIndex = 0;
             this.label1.Text = "Max lifting capacity";
             this.label1.Click += new System.EventHandler(this.label1_Click);
@@ -72,9 +70,9 @@ namespace ContainerShipWindowsForms
             // maxLiftTB
             // 
             this.maxLiftTB.Font = new System.Drawing.Font("Microsoft Sans Serif", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.maxLiftTB.Location = new System.Drawing.Point(295, 3);
+            this.maxLiftTB.Location = new System.Drawing.Point(271, 3);
             this.maxLiftTB.Name = "maxLiftTB";
-            this.maxLiftTB.Size = new System.Drawing.Size(102, 44);
+            this.maxLiftTB.Size = new System.Drawing.Size(208, 44);
             this.maxLiftTB.TabIndex = 1;
             this.maxLiftTB.TextChanged += new System.EventHandler(this.textBox1_TextChanged);
             // 
@@ -91,7 +89,7 @@ namespace ContainerShipWindowsForms
             // findBtn
             // 
             this.findBtn.Font = new System.Drawing.Font("Microsoft Sans Serif", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.findBtn.Location = new System.Drawing.Point(19, 132);
+            this.findBtn.Location = new System.Drawing.Point(3, 211);
             this.findBtn.Name = "findBtn";
             this.findBtn.Size = new System.Drawing.Size(153, 47);
             this.findBtn.TabIndex = 3;
@@ -102,45 +100,42 @@ namespace ContainerShipWindowsForms
             // pathTB
             // 
             this.pathTB.Font = new System.Drawing.Font("Microsoft Sans Serif", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.pathTB.Location = new System.Drawing.Point(201, 3);
+            this.pathTB.Location = new System.Drawing.Point(271, 107);
             this.pathTB.Name = "pathTB";
-            this.pathTB.Size = new System.Drawing.Size(235, 44);
+            this.pathTB.Size = new System.Drawing.Size(208, 44);
             this.pathTB.TabIndex = 4;
             this.pathTB.TextChanged += new System.EventHandler(this.textBox3_TextChanged);
             // 
-            // flowLayoutPanel1
+            // tableLayoutPanel1
             // 
-            this.flowLayoutPanel1.Controls.Add(this.label1);
-            this.flowLayoutPanel1.Controls.Add(this.maxLiftTB);
-            this.flowLayoutPanel1.Location = new System.Drawing.Point(19, 12);
-            this.flowLayoutPanel1.Name = "flowLayoutPanel1";
-            this.flowLayoutPanel1.Size = new System.Drawing.Size(428, 52);
-            this.flowLayoutPanel1.TabIndex = 6;
-            // 
-            // flowLayoutPanel2
-            // 
-            this.flowLayoutPanel2.Controls.Add(this.openFileBtn);
-            this.flowLayoutPanel2.Controls.Add(this.pathTB);
-            this.flowLayoutPanel2.Location = new System.Drawing.Point(19, 70);
-            this.flowLayoutPanel2.Name = "flowLayoutPanel2";
-            this.flowLayoutPanel2.Size = new System.Drawing.Size(542, 56);
-            this.flowLayoutPanel2.TabIndex = 7;
+            this.tableLayoutPanel1.ColumnCount = 2;
+            this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 47.77518F));
+            this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 52.22482F));
+            this.tableLayoutPanel1.Controls.Add(this.pathTB, 1, 1);
+            this.tableLayoutPanel1.Controls.Add(this.openFileBtn, 0, 1);
+            this.tableLayoutPanel1.Controls.Add(this.maxLiftTB, 1, 0);
+            this.tableLayoutPanel1.Controls.Add(this.findBtn, 0, 2);
+            this.tableLayoutPanel1.Controls.Add(this.label1, 0, 0);
+            this.tableLayoutPanel1.Location = new System.Drawing.Point(12, 12);
+            this.tableLayoutPanel1.Name = "tableLayoutPanel1";
+            this.tableLayoutPanel1.RowCount = 3;
+            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 50F));
+            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 50F));
+            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 89F));
+            this.tableLayoutPanel1.Size = new System.Drawing.Size(563, 297);
+            this.tableLayoutPanel1.TabIndex = 8;
             // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 450);
-            this.Controls.Add(this.flowLayoutPanel2);
-            this.Controls.Add(this.flowLayoutPanel1);
-            this.Controls.Add(this.findBtn);
+            this.Controls.Add(this.tableLayoutPanel1);
             this.Controls.Add(this.outputTB);
             this.Name = "Form1";
-            this.Text = "Form1";
-            this.flowLayoutPanel1.ResumeLayout(false);
-            this.flowLayoutPanel1.PerformLayout();
-            this.flowLayoutPanel2.ResumeLayout(false);
-            this.flowLayoutPanel2.PerformLayout();
+            this.Text = "Containers";
+            this.tableLayoutPanel1.ResumeLayout(false);
+            this.tableLayoutPanel1.PerformLayout();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -155,8 +150,7 @@ namespace ContainerShipWindowsForms
         private System.Windows.Forms.TextBox outputTB;
         private System.Windows.Forms.Button findBtn;
         private System.Windows.Forms.TextBox pathTB;
-        private System.Windows.Forms.FlowLayoutPanel flowLayoutPanel1;
-        private System.Windows.Forms.FlowLayoutPanel flowLayoutPanel2;
+        private System.Windows.Forms.TableLayoutPanel tableLayoutPanel1;
     }
 }
 

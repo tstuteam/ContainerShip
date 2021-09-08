@@ -23,7 +23,7 @@ namespace ContainerShipWindowsForms
 
         }
         /// <summary>
-        /// Выборка файла для задачи
+        /// File selection
         /// </summary>
         /// <param name="sender"></param>
         /// <param name="e"></param>
@@ -33,10 +33,10 @@ namespace ContainerShipWindowsForms
 
             if (openFileDialog1.ShowDialog() == System.Windows.Forms.DialogResult.OK)
             {
-                this.pathTB.Clear();
-                string path = openFileDialog1.FileName;
-                this.pathTB.Text = path;
-            }           
+                pathTB.Clear();
+                var path = openFileDialog1.FileName;
+                pathTB.Text = path;
+            }
         }
 
         private void label1_Click(object sender, EventArgs e)
@@ -44,7 +44,8 @@ namespace ContainerShipWindowsForms
 
         }
         /// <summary>
-        /// Выполнение задачи
+        /// Make output to the screen.
+        /// Checks the validity of the input.
         /// </summary>
         /// <param name="sender"></param>
         /// <param name="e"></param>
@@ -62,7 +63,7 @@ namespace ContainerShipWindowsForms
             }
             catch (Exception)
             {
-                MessageBox.Show("Enter max lifting capacity.");
+                MessageBox.Show($"Enter max lifting capacity.", "Error");
                 return;
             }
 
@@ -72,12 +73,12 @@ namespace ContainerShipWindowsForms
             }
             catch (Exception)
             {
-                MessageBox.Show("File read error.");
+                MessageBox.Show("File read error.", "Error");
                 return;
             }
 
 
-            ship.TakeMaxAmountCrates().ForEach(x => 
+            ship.TakeMaxAmountCrates().ForEach(x =>
             {
                 str += x;
                 str += Environment.NewLine;

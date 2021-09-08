@@ -16,7 +16,7 @@ namespace ContainerShipClassLibrary
         /// <summary>
         /// Initializing Variables
         /// </summary>
-        /// <param name="max"></param>
+        /// <param name="max">Maximum lifting capacity</param>
         public ContainerShip(int max)
         {
             maxLiftingCapacity = max;
@@ -62,8 +62,8 @@ namespace ContainerShipClassLibrary
         /// Takes masses from the `cargoWeights` list 
         /// until now, until `max` becomes negative.
         /// </summary>
-        /// <param name="result"></param>
-        /// <param name="max"></param>
+        /// <param name="result">List with suitable weights</param>
+        /// <param name="max">Maximum lifting capacity</param>
         private void TakeLowestItems(List<int> result, int max)
         {
             for (int i = 0; i < cargoWeights.Count(); i++)
